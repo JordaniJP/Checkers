@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import Image, ImageTk
 
 root = Tk()
 frame=Frame(root)
@@ -18,31 +19,23 @@ whiteCheckers=False
 
 
 
-
 for x in range(8):
     for y in range(8):
         if (x + y) % 2 != 0:
             btn1 = Button(frame, bg="red")
             btn1.grid(row=x, column=y, sticky=N + S + E + W)
         if (x+y) % 2 != 0 and x < 3:
-            btn1 = Button(frame, bg="blue")
+            btn1 = Button(frame, text="BLACK", bg="red")
             btn1.grid(row=x, column=y, sticky=N + S + E + W)
         if (x+y) % 2 !=0 and x == 7:
-            btn1 = Button(frame, bg="blue")
+            btn1 = Button(frame, text="RED", bg="red")
             btn1.grid(row=x, column=y, sticky=N + S + E + W)
         if (x + y) % 2 != 0 and x == 6:
-            btn1 = Button(frame, bg="blue")
+            btn1 = Button(frame, text="RED", bg="red")
             btn1.grid(row=x, column=y, sticky=N + S + E + W)
         if (x + y) % 2 != 0 and x == 5:
-            btn1 = Button(frame, bg="blue")
+            btn1 = Button(frame, text="RED", bg="red")
             btn1.grid(row=x, column=y, sticky=N + S + E + W)
-
-
-
-
-
-
-
 
 
 for x in range(8):
